@@ -1,8 +1,17 @@
+# NEWNESS FORK
+
+We forked this repo because as of https://github.com/redux-utilities/flux-standard-action/commit/657bc7281310d7a7cf94ea2f35fdc540a1d4c2f2, flux-standard-action imports all of 'lodash' despite only needing two functions.
+
+## New releases
+
+To build a new release, run `yarn build`, update the version field in package.json, and merge.
+
 # Looking for Maintainers
 
 **Unfortunately I ([timche](https://github.com/timche)) don't have the required time anymore to maintain this library and give it the necessary attention. Therefore I'm looking for maintainers that are willing to take care of this library on a long-term basis.**
 
 Requirements:
+
 - Having knowledge of this library and open-source in general.
 - Keeping the philosophy and goals of this library.
 - Taking care of issues and pull requests.
@@ -10,7 +19,7 @@ Requirements:
 - Knowing what's good for the library and what not (e.g. not accepting every suggestion) in order to maintain the library scope.
 - Having knowledge about the tooling (CI, build system, etc.) and the docs and maintaining them.
 
-It's also possible to join [redux-utilities](https://github.com/redux-utilities), an umbrella organization of complementing redux utility libraries like this one, to take care of few or all libraries. Please let me know if you are interested in that. 
+It's also possible to join [redux-utilities](https://github.com/redux-utilities), an umbrella organization of complementing redux utility libraries like this one, to take care of few or all libraries. Please let me know if you are interested in that.
 
 Please send me an email (adress on my profile) with the subject "flux-standard-action" and some information about you, if you want to be a maintainer.
 
@@ -35,9 +44,9 @@ Flux actions can be thought of as an asynchronous sequence of values. It is impo
 
 ### Design goals
 
-* **Human-friendly.** FSA actions should be easy to read and write by humans.
-* **Useful**. FSA actions should enable the creation of useful tools and abstractions.
-* **Simple.** FSA should be simple, straightforward, and flexible in its design.
+- **Human-friendly.** FSA actions should be easy to read and write by humans.
+- **Useful**. FSA actions should enable the creation of useful tools and abstractions.
+- **Simple.** FSA should be simple, straightforward, and flexible in its design.
 
 ### Example
 
@@ -47,7 +56,7 @@ A basic Flux Standard Action:
 {
   type: 'ADD_TODO',
   payload: {
-    text: 'Do something.'  
+    text: 'Do something.'
   }
 }
 ```
@@ -66,14 +75,14 @@ An FSA that represents an error, analogous to a rejected Promise:
 
 An action MUST
 
-* be a plain JavaScript object.
-* have a `type` property.
+- be a plain JavaScript object.
+- have a `type` property.
 
 An action MAY
 
-* have an `error` property.
-* have a `payload` property.
-* have a `meta` property.
+- have an `error` property.
+- have a `payload` property.
+- have a `meta` property.
 
 An action MUST NOT include properties other than `type`, `payload`, `error`, and `meta`.
 
@@ -121,6 +130,6 @@ Returns true if `action` represents an error.
 
 ## Libraries
 
-* [redux-actions](https://github.com/acdlite/redux-actions) - a set of helpers for creating and handling FSA actions in Redux.
-* [redux-promise](https://github.com/acdlite/redux-promise) - Redux promise middleware that supports FSA actions.
-* [redux-rx](https://github.com/acdlite/redux-rx) - RxJS utilities for Redux, including a middleware that supports FSA actions.
+- [redux-actions](https://github.com/acdlite/redux-actions) - a set of helpers for creating and handling FSA actions in Redux.
+- [redux-promise](https://github.com/acdlite/redux-promise) - Redux promise middleware that supports FSA actions.
+- [redux-rx](https://github.com/acdlite/redux-rx) - RxJS utilities for Redux, including a middleware that supports FSA actions.
